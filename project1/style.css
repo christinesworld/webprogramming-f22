@@ -1,11 +1,23 @@
+.background {
+	background-image: radial-gradient(white, white, blue);
+  background-attachment: fixed;
+}
+
 body{
   font-size: 24px;
   font-family: akkurat;
   color: blue;
 }
 
+.header{
+  color: blue;
+  font-family: mono;
+  font-size: 16px;
+  line-height: 0.5;
+}
+
 .title{
-  padding-top: 30px;
+  padding-top: 40px;
   color: blue;
   font-size: 72px;
   font-weight: bold;
@@ -36,10 +48,7 @@ body{
   color: magenta;
 }
 
-.background {
-	background-image: radial-gradient(white, white, blue);
-  background-attachment: fixed;
-}
+
 
 
 img {
@@ -73,8 +82,7 @@ img {
 
 
 hr.pink{
-  border-top: 1px solid magenta;
-  border-bottom: 1px solid magenta;
+  border: 1px solid magenta;
 }
 
 .vl {
@@ -122,7 +130,7 @@ hr.pink{
 @font-face {
   font-family: akkurat;
   font-weight: bold;
-  src: url(Akkurat-black.otf);
+  src: url(Akkurat-Black.otf);
 }
 
 @font-face {

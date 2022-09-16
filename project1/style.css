@@ -1,14 +1,16 @@
 body{
   font-size: 24px;
   font-family: akkurat;
+  color: blue;
 }
 
 .title{
-
+  padding-top: 30px;
   color: blue;
   font-size: 72px;
   font-weight: bold;
   font-family: louise;
+  line-height: 0.8;
 }
 
 .h1{
@@ -31,7 +33,7 @@ body{
 
 .link:hover{
   font-family: mono;
-  color:blue;
+  color: magenta;
 }
 
 .background {
@@ -49,7 +51,7 @@ img {
 .imgbox{
   box-sizing: border-box;
 	padding: 12px 8% 12px;
-	border: 2px dotted black;
+	border: 4px dotted magenta;
 }
 
 .imgbox .imgtitle{
@@ -63,8 +65,23 @@ img {
 
 .imgbox .imgbody{
   font-size: 16px;
-  line-height: 0.9;
+  line-height: 1.2;
   padding: 5px 0px 15px;
+}
+
+
+
+
+hr.pink{
+  border-top: 1px solid magenta;
+  border-bottom: 1px solid magenta;
+}
+
+.vl {
+  border-left: 1px solid magenta;
+  border-right: : 1px solid magenta;
+  height: 100%;
+  right: 67%;
 }
 
 
@@ -99,32 +116,32 @@ img {
 
 @font-face {
   font-family: akkurat;
-  src: url(Akkurat-Regular.otf)
+  src: url(Akkurat-Regular.otf);
 }
 
 @font-face {
   font-family: akkurat;
   font-weight: bold;
-  src: url(Akkurat-black.otf)
+  src: url(Akkurat-black.otf);
 }
 
 @font-face {
   font-family: mono;
-  src: url(AkkuratMono-Regular.otf)
+  src: url(AkkuratMono-Regular.otf);
 }
 
 @font-face {
   font-family: mono;
   font-weight: bold;
-  src: url(AkkuratMono-Bold.otf)
+  src: url(AkkuratMono-Bold.otf);
 }
 
 @font-face {
   font-family: alpina;
-  src: url(GT-Alpina-Standard-Regular.otf)
+  src: url(GT-Alpina-Standard-Regular.otf);
 }
 
 @font-face {
   font-family: louise;
-  src: url(Louise-Regular.otf)
+  src: url(Louise-Regular.otf);
 }

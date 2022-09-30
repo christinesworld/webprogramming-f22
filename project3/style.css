@@ -81,6 +81,7 @@ h1 {
   line-height: 0.9;
   color: #32C0C9;
   font-weight: normal;
+  text-transform: uppercase;
 }
 
 p {

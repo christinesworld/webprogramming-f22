@@ -35,7 +35,7 @@ header {
 .hatsune {
   flex-grow: 5;
   flex-shrink: 5;
-  align-self: flex-start;
+  align-self: stretch;
 }
 
 .right {
@@ -85,6 +85,13 @@ h1 {
   font-weight: normal;
 }
 
+p {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #32C0C9;
+  width: 400px;
+}
 
 /* BANNER! */
 

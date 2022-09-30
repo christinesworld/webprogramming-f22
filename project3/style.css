@@ -28,19 +28,17 @@ header {
 }
 
 .left {
-  flex-grow: 7;
-  flex-shrink: 7;
+  flex: 7 7 auto;
 }
 
 .hatsune {
-  flex-grow: 5;
-  flex-shrink: 5;
+  flex: 5 5 auto;
   align-self: stretch;
 }
 
 .right {
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex: 1 1 auto;
+  width: 1fr;
 }
 
 .sidebar {

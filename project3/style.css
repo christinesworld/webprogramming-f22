@@ -1,66 +1,22 @@
 html {
 	scroll-behavior: smooth; /* Makes anchor links scroll smoothly */
   background-color: #EAFBFF;
+  height: 100%;
 }
 
 * {
   box-sizing: border-box;
 }
 
-
-header {
-  background-image: url("img_MIKU_us.png");
-	background-color: #EAFBFF;
-  background-repeat: no-repeat;
-	background-position: top 20px right 20px;
-
-	width: 100vw;
-	height: 100vh;
-
-  font-size: 150px;
-  color: #32C0C9;
-
-  display: flex;
-  flex-direction: row;
-  padding: 35px;
-  gap: 20px;
-  justify-content: flex-start;
-}
-
-.left {
-  flex: 10 10 auto;
-}
-
-.hatsune {
-  flex: 3 3 auto;
-  align-self: stretch;
-}
-
-.right {
-  flex: 1 1 auto;
-  width: 1fr;
-}
-
-.sidebar {
-	font-size: 20px;
-	line-height: 1.2;
-	font-family: GT America Mono;
-}
-
-.vl {
-  border: 1px solid #32C0C9;
-  height: 95vh;
-}
-
-
 body {
 	margin: 0;
 	padding: 0;
 	font-size: 24px;
 	font-family: PP Neue Montreal;
-	color: #FFFFFF;
+	color: #32C0C9;
 	max-width: 100vw;
 	overflow-x: hidden;
+  height: 100%;
 }
 
 /*Text Styles*/
@@ -84,19 +40,227 @@ h1 {
   text-transform: uppercase;
 }
 
-p {
-  margin: 0;
-  font-size: 24px;
-  line-height: 1.2;
-  color: #32C0C9;
-  width: 400px;
+h2 {
+  font-size: 36;
+  line-height: 1.0;
+  color: #EE2B88;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: GT America Mono;
 }
+
+p {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #32C0C9;
+  width: 600px;
+  font-family: PP Neue Montreal;
+}
+
+hr {
+  border-top: 2px #32C0C9 solid;
+  border-bottom: 0px;
+}
+
+
+
+/* Header stuff */
+
+header {
+	width: 100vw;
+	height: 100vh;
+
+  font-size: 150px;
+  color: #32C0C9;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 20px 35px 20px;
+  gap: 20px;
+}
+
+.left {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.hatsune {
+  grid-column-start: 6;
+  grid-column-end: 9;
+}
+
+.right {
+  grid-column-start: 9;
+  grid-column-end: 10;
+  width: 1fr;
+}
+
+.vl {
+  border-left: 2px solid #32C0C9;
+  padding: 0px 20px 0px;
+  height: 95vh;
+
+}
+
+
+
+/* body stuff */
+
+.content {
+  /*display: grid;
+  grid-template-columns: auto auto auto; */
+  padding: 60px 10px 20px;
+  gap: 20px;
+  height: 100%
+}
+
+#left2 {
+  float: left;
+  width: 64vw;
+  height: 100%;
+  overflow: auto;
+  padding-right:10px;
+}
+
+.bcgrid {
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  grid-row-gap: 30px;
+  grid-column-gap: 20px;
+}
+
+
+#right2 {
+  float: left;
+  width: 34vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tracklist {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 0.3fr, 0.3fr;
+  grid-auto-rows: minmax(min-content, max-content);
+  padding: 10px 10px 20px;
+  column-gap: 20px;
+  row-gap: 5px;
+  align-items: stretch; /* Makes grid items the same height */
+  /*grid-row: 300px;*/
+
+  font-size: 20px;
+  color: #32C0C9;
+}
+
+.sidebar {
+  font-family:GT America Mono;
+  padding-left: 10px;
+}
+
+/* BodyCopy grid*/
+
+.bc1 { grid-area: 1 / 1 / 2 / 2; }
+.bc2 { grid-area: 2 / 1 / 3 / 2; }
+.bc3 { grid-area: 3 / 1 / 4 / 2; }
+
+.head1 { grid-area: 1 / 2 / 2 / 3; }
+.head2 { grid-area: 2 / 2 / 3 / 3; }
+.head3 { grid-area: 3 / 2 / 4 / 3; }
+
+/*song list */
+
+.entry {}
+
+.songlabel { grid-area: 1 / 1 / 2 / 2; }
+.song1 { grid-area: 2 / 1 / 3 / 2; }
+.song2 { grid-area: 3 / 1 / 4 / 2; }
+.song3 { grid-area: 4 / 1 / 5 / 2; }
+.song4 { grid-area: 5 / 1 / 6 / 2; }
+.song5 { grid-area: 6 / 1 / 7 / 2; }
+
+.prodlabel { grid-area: 1 / 2 / 2 / 3; }
+.prod1 { grid-area: 2 / 2 / 3 / 3; }
+.prod2 { grid-area: 3 / 2 / 4 / 3; }
+.prod3 { grid-area: 4 / 2 / 5 / 3; }
+.prod4 { grid-area: 5 / 2 / 6 / 3; }
+.prod5 { grid-area: 6 / 2 / 7 / 3; }
+
+.yrlabel { grid-area: 1 / 3 / 2 / 4; }
+.yr1 { grid-area: 2 / 3 / 3 / 4; }
+.yr2 { grid-area: 3 / 3 / 4 / 4; }
+.yr3 { grid-area: 4 / 3 / 5 / 4; }
+.yr4 { grid-area: 5 / 3 / 6 / 4; }
+.yr5 { grid-area: 6 / 3 / 7 / 4; }
+
+.play0 { grid-area: 1 / 4 / 2 / 5; }
+.play1 { grid-area: 2 / 4 / 3 / 5; }
+.play2 { grid-area: 3 / 4 / 4 / 5; }
+.play3 { grid-area: 4 / 4 / 5 / 5; }
+.play4 { grid-area: 5 / 4 / 6 / 5; }
+.play5 { grid-area: 6 / 4 / 7 / 5; }
+
+.entry:after {
+  content:'';
+  position:absolute;
+  border-bottom:1px solid black;
+  top:-20px;left:0;
+  height:1px;
+  width:1000%;
+}
+
+
+/*image bank!*/
+
+/*.imgbank {
+  padding: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.imgtext {
+  font-size: 40px;
+  color: #32C0C9;
+  color: white;
+  font-family: GT America Mono;
+  text-transform: uppercase;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+}
+
+.container:hover .imgtext{
+  opacity: 1;
+}
+
+*/
+
+
 
 /* BANNER! */
 
 .banner {
-	position: sticky;
+	position: relative;
 	background-color: #EE2B88;
+  top: 0px;
 	/* width: 100vw; */
   display: flex;
   padding-left: 20px;
@@ -147,14 +311,14 @@ p {
 @font-face {
   font-family: PP Neue Montreal;
   font-weight: bold;
-  src: url(PPNeueMontreal-Bold.ttf);
+  src: url(PPNeueMontreal-Semibold.ttf);
 }
 
 
 @font-face {
   font-family: GT America Mono;
   font-weight: normal;
-  src: url(GT-America-Mono-Regular.otf);
+  src: url(GT-America-Mono-Medium.otf);
 }
 
 @font-face {

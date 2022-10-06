@@ -33,7 +33,7 @@ a:hover {
 h1 {
   margin: 0;
 	padding: 0;
-  font-size: 150px;
+  font-size: 10vw;
   line-height: 0.9;
   color: #32C0C9;
   font-weight: normal;
@@ -44,22 +44,42 @@ h2 {
   font-size: 36;
   line-height: 1.0;
   color: #EE2B88;
-  font-weight: normal;
   text-transform: uppercase;
   font-family: GT America Mono;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 24;
+  color: #EE2B88;
+  font-family: GT America Mono;
+  padding-top: 30px;
+  font-weight: normal;
 }
 
 p {
   font-size: 20px;
   line-height: 1.4;
   color: #32C0C9;
-  width: 600px;
+  max-width: 600px;
   font-family: PP Neue Montreal;
+}
+
+.subtitle {
+  position: absolute;
+  bottom: 10px;
+  max-width: 40vw;
+  font-size: 28px;
 }
 
 hr {
   border-top: 2px #32C0C9 solid;
   border-bottom: 0px;
+  margin-top: 3px;
+  margin-bottom: 6px;
+  border-style: dotted;
 }
 
 
@@ -74,25 +94,25 @@ header {
   color: #32C0C9;
 
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 2fr 3fr 1fr;
   padding: 20px 35px 20px;
   gap: 20px;
 }
 
 .left {
-  grid-column-start: 1;
-  grid-column-end: 6;
+  /*grid-column-start: 1;
+  grid-column-end: 6;*/
 }
 
 .hatsune {
-  grid-column-start: 6;
-  grid-column-end: 9;
+  /*grid-column-start: 6;
+  grid-column-end: 9;*/
 }
 
 .right {
-  grid-column-start: 9;
-  grid-column-end: 10;
-  width: 1fr;
+  /*grid-column-start: 9;
+  grid-column-end: 10;*/
+
 }
 
 .vl {
@@ -107,16 +127,14 @@ header {
 /* body stuff */
 
 .content {
-  /*display: grid;
-  grid-template-columns: auto auto auto; */
+  display: grid;
+  grid-template-columns: 64vw 34vw;
   padding: 60px 10px 20px;
   gap: 20px;
   height: 100%
 }
 
 #left2 {
-  float: left;
-  width: 64vw;
   height: 100%;
   overflow: auto;
   padding-right:10px;
@@ -124,40 +142,43 @@ header {
 
 .bcgrid {
   display:grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-row-gap: 30px;
   grid-column-gap: 20px;
 }
 
-
 #right2 {
-  float: left;
-  width: 34vw;
   height: 100%;
   overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .tracklist {
+  align-self: start;
+
   display: grid;
-  grid-template-columns: 1fr, 1fr, 0.3fr, 0.3fr;
-  grid-auto-rows: minmax(min-content, max-content);
+  grid-template-columns: 2fr 1fr 0.3fr 0.3fr;
+  /*grid-auto-rows: minmax(min-content, max-content);*/
   padding: 10px 10px 20px;
   column-gap: 20px;
   row-gap: 5px;
   align-items: stretch; /* Makes grid items the same height */
-  /*grid-row: 300px;*/
 
   font-size: 20px;
   color: #32C0C9;
 }
 
 .sidebar {
-  font-family:GT America Mono;
+  font-family: GT America Mono;
   padding-left: 10px;
+  align-self: end;
 }
 
 /* BodyCopy grid*/
 
+/*
 .bc1 { grid-area: 1 / 1 / 2 / 2; }
 .bc2 { grid-area: 2 / 1 / 3 / 2; }
 .bc3 { grid-area: 3 / 1 / 4 / 2; }
@@ -165,9 +186,11 @@ header {
 .head1 { grid-area: 1 / 2 / 2 / 3; }
 .head2 { grid-area: 2 / 2 / 3 / 3; }
 .head3 { grid-area: 3 / 2 / 4 / 3; }
+*/
 
 /*song list */
 
+/*
 .entry {}
 
 .songlabel { grid-area: 1 / 1 / 2 / 2; }
@@ -207,6 +230,7 @@ header {
   width:1000%;
 }
 
+*/
 
 /*image bank!*/
 
@@ -297,6 +321,52 @@ header {
   }
 }
 
+/* Miku animation */
+
+.mikuani {
+  animation: slaymove 1s;
+}
+
+@keyframes slaymove {
+  from {
+      transform: translateX(-100%);
+      opacity: 0.25;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/*spinning on hover*/
+
+.imgspin:hover {
+  animation: spin 1s;
+}
+
+/*
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+*/
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
 
 
 
@@ -321,8 +391,19 @@ header {
   src: url(GT-America-Mono-Medium.otf);
 }
 
+/* @font-face {
+  font-family: GT America Mono;
+  font-weight: lighter;
+  src: url(GT-America-Mono-Regular.otf);
+} */
+
 @font-face {
   font-family: GT America Mono;
   font-weight: bold;
   src: url(GT-America-Mono-Bold.otf);
+}
+
+@font-face {
+  font-family: Louise;
+  src: url(Louise-Regular.otf);
 }
